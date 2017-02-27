@@ -1,0 +1,162 @@
+body {
+	padding-top:50px;
+	padding-bottom: 70px;
+}
+.navbar {
+	background-color: #4CAF50;
+}
+.navbar-brand{
+	line-height: 0;
+	padding: 0;
+	padding-left: 50px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: rgba(255, 255, 255, 0.8);
+	font-size: 15px;
+    font-family: "微软雅黑";
+	background-color: #4CAF50
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: rgba(255, 255, 255, 0.6);
+	font-size: 18px;
+    font-family: "微软雅黑";
+}
+.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 0.6);
+	font-size: 15px;
+    font-family: "微软雅黑";
+}
+/*.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #eee;
+}*/
+.carousel {
+	height: 250px;
+	background-color: #fff;
+	margin-top: 50px;
+}
+.carousel .item {
+	height:250px;
+	background-color: #fff; 
+}
+.carousel img {
+	width: 100%;
+	min-width: 100%;
+	min-height: 250px;
+	margin-right: 20px;
+}
+.carousel-caption {
+	font-size: 25px;
+	opacity: 0.8;
+}
+.container {
+	margin-top: 16px;
+}
+.basic{
+	margin-top: 50px;
+}
+.table {
+	border-bottom: solid 1px #c0c0c0;
+	border-top: none;
+}
+.table h4 {
+	color :red;
+	font-size: 22px;
+}
+ a:link, a:visited {
+	text-decoration: none;
+	color :black;
+}
+.table a:hover {
+	color: black;
+	text-decoration:underline;
+	color: green;
+}
+.list-block {
+	list-style-type:  none ;
+}
+.list-block {
+	border:solid 1px black;
+}
+.list-block-top li{
+	list-style-type: decimal;
+	color:red;
+}
+.list-block-bottom li {
+	list-style-type:square; 
+	color: red;
+}
+.list-block a:hover {
+	color:green;
+}
+.pagination  {
+	display: inline;
+}
+.pagination  li{
+	display: inline;
+}
+.table h4 {
+	display: inline;
+}
+.table nav, .table div {
+	display: inline;
+}
+.list-block {
+	padding-top: 6.5px;
+	padding-bottom: 8px;
+}
+.list-block li a {
+	line-height: 2em;
+} 
+.container-one {
+	background-color: pink;
+}
+.container-two {
+	background-color: rgb(233,114,248);
+}
+.container-three {
+	background-color: rgb(251,205,111);
+}
+.container-four{
+	background-color: rgb(4,182,194);
+}
+.container-vlab-left, .container-vlab-right {
+	display: inline;
+	display:-webkit-flex;
+    display:-moz-flex;
+    display:flex;
+    display:-ms-flexbox;
+   display: box;
+   box-orient: inline-axis;
+   padding:13px;
+   margin:3px;
+   align-items: center;
+   border-radius: 20px;
+}
+.img-rounded {
+	padding-right: 13px;
+}
+@media all and (max-width: 600px) {
+    .container-vlab-left, .container-vlab-right {
+    	display: flex;
+    	flex-direction: column;
+    }
+    .container-image-left {
+    	padding-bottom: 13px;
+    }
+    .container-image-right { order: 1; } 
+    .container-text-right { order: 2; }
+        .container-image-right img {
+    	padding-left: 13px;
+    }
+
+}
+
+@media all and (min-width: 800px) {
+    .container-image-left { order: 1; } 
+    .container-text-left { order: 2; }
+    .container-image-right img {
+    	padding-left: 13px;
+    }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vlab线上学习</title>
+    <!-- Vendor CSS -->
+    <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/online.css">
+    <script type="text/javascript" src="form/Js/sub.js"></script>
+</head>
+
+<body>
+        <header id="header" class="clearfix">
+            <ul class="header-inner clearfix">
+                <li id="menu-trigger" data-trigger=".ha-menu" class="visible-xs">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="logo ">
+                    <a href="vlabindex.html"></a>
+                </li>
+
+                    <nav class="nav_bar ha-menu">
+                        <ul>
+                            <li class="waves-effect"><a href="vlabindex.html">首页</a></li>
+                            <li class="active waves-effect"><a href="online.html">线上学习</a></li>
+                            <li class="waves-effect"><a href="vlababout/indexVlab.html">关于Vlab</a></li>
+                            <li class="waves-effect"><a href="service.html">Vlab服务</a></li>
+                            <li class="waves-effect"><a href="vlababout/indexNew.html">新闻中心</a></li>
+                        </ul>
+                    </nav>
+            <li class="pull-right login"><a data-toggle="modal" href="#modalDefault">登&nbsp&nbsp录</a></li>
+            </ul>
+            <!-- Top Search Content -->
+            <div id="top-search-wrap">
+                <div class="tsw-inner">
+                    <i id="top-search-close" class="zmdi zmdi-arrow-left"></i>
+                    <input type="text">
+                </div>
+            </div>
+        </header>
+         <!-- Modal Default -->	
+        <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!--logo-->
+                    </div>
+                    <div class="modal-body">
+                        <div role="tabpanel" class="tab">
+                            <ul class="tab-nav" role="tablist">
+                                <li class="active"><a href="#home9" aria-controls="home9" role="tab" data-toggle="tab">登录</a></li>
+                                <li role="presentation"><a href="#profile9" aria-controls="profile9" role="tab" data-toggle="tab">注册</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active animated fadeInRight in" id="home9">
+                                    <form role="form" action="backstage/login.class.php" method="post">
+                                       <div class="input-group fg-float una">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                        <div class="fg-line">
+                                            <input type="text" class="form-control" name="username">
+                                            <label class="fg-label">用户名</label>
+                                        </div>
+                                        </div>
+                                        <div class="input-group fg-float psw">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                            <div class="fg-line">
+                                                <input type="password" class="form-control" name="password">
+                                                <label class="fg-label">密码</label>
+                                            </div>
+                                        </div>
+                                        <button type="button submit"class="btnn" value="login">登  &nbsp 录</button> 
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane animated fadeInRight" id="profile9">
+                                    <form role="form" action="backstage/Registered.php" method="post" onsubmit="return checkForm()">
+                                        <div class="input-group fg-float una">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                            <div class="fg-line">
+                                                <input type="text" class="form-control" name="name" id="userNamee"  onfocus="userNameFocus()" onblur="userNameBlur()"/>
+                                                <label class="fg-label">请输入你的账号</label>
+                                            </div>
+                                        </div>
+                                        <div id="userNameIdd"></div>
+                                        <div class="input-group fg-float psw">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                            <div class="fg-line">
+                                                <input type="password" class="form-control" name="password" id="pwddd" onfocus="pwdFocus()" onblur="pwdBlur()"/>
+                                                <label class="fg-label">请输入你的密码</label>
+                                            </div>
+                                        </div>
+                                        <div id="pwdIdd"></div>
+                                        <div class="input-group fg-float psw">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                            <div class="fg-line">
+                                                <input type="password" class="form-control" name="repassword" id="repwdd" onblur="repwdBlur()"/>
+                                                <label class="fg-label">请再次输入你的密码</label>
+                                            </div>
+                                        </div>
+                                        <div id="repwdIdd"></div>
+                                        <button type="submit" class="btnn" name="Submit">注  &nbsp 册</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--nav结束-->
+    <div class="container">
+        <div class="card" style="margin-top:100px;box-shadow:0px 0px 0px;">
+            <div class="card-header">
+                <h2>备考咨询 <small>这是一句有关于VLAB在线课程的简介。</small></h2>
+            </div>
+            <div class="card-body card-padding">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="media/carousel/c-1.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h3>首页</h3>
+                                <p>说明</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="media/carousel/c-2.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h3>首页</h3>
+                                <p>说明</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="media/carousel/c-3.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h3>首页</h3>
+                                <p>说明</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="zmdi zmdi-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="zmdi zmdi-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab">
+            <ul class="tab-nav" role="tablist" data-tab-color="amber">
+                <li class="active"><a href="#classStudy" aria-controls="classStudy" role="tab" data-toggle="tab">课程学习</a></li>
+                <li role="presentation"><a href="#classDown" aria-controls="classDown" role="tab" data-toggle="tab">教学Demo下载</a></li>
+                <li role="presentation"><a href="#onlineTest" aria-controls="onlineTest" role="tab" data-toggle="tab">在线考试</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active animated fadeIn in" id="classStudy">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/1.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="learnclasss.html" style="float:right;margin-right: 10px;padding:3px;">选择课程</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font">
+                            <div class="cour-font z-depth-2">
+                            <img src="img/headers/2.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="learnclasss.html" style="float:right;margin-right: 10px;padding:3px;">选择课程</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font">
+                            <div class="cour-font z-depth-2">
+                            <img src="img/headers/3.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="learnclasss.html" style="float:right;margin-right: 10px;padding:3px;">选择课程</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/7.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="learnclasss.html" style="float:right;margin-right: 10px;padding:3px;">选择课程</a>
+                        </div>
+                    </div><div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/5.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="learnclasss.html" style="float:right;margin-right: 10px;padding:3px;">选择课程</a>
+                        </div>
+                    </div><div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/6.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="learnclasss.html" style="float:right;margin-right: 10px;padding:3px;">选择课程</a>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane animated fadeIn" id="classDown">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/3.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="" style="float:right;margin-right: 10px;padding:3px;">课程下载</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/1.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="" style="float:right;margin-right: 10px;padding:3px;">课程下载</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/2.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="" style="float:right;margin-right: 10px;padding:3px;">课程下载</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/8.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="" style="float:right;margin-right: 10px;padding:3px;">课程下载</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/4.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="" style="float:right;margin-right: 10px;padding:3px;">课程下载</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cour-font z-depth-2">
+                            <img src="img/headers/5.png" alt="" >
+                            
+                            <h4>这是课程名称</h4>
+                            <span style="color:darkgray;">这里是课程内容简介</span>
+                            <a href="" style="float:right;margin-right: 10px;padding:3px;">课程下载</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane animated fadeIn" id="onlineTest">
+                    <p>Etiam rhoncus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Cras id dui. Curabitur
+                        turpis. Etiam ut purus mattis mauris sodales aliquam. Aenean viverra rhoncus pede. Nulla sit amet
+                        est. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Praesent ac sem eget est egestas
+                        volutpat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript Libraries -->
+    <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendors/bower_components/flot/jquery.flot.js"></script>
+    <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+    <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+    <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+    <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+    <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+    <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+    <!-- Placeholder for IE9 -->
+    <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+    <script src="js/flot-charts/curved-line-chart.js"></script>
+    <script src="js/flot-charts/line-chart.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+
+</html>

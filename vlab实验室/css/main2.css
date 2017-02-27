@@ -1,0 +1,20 @@
+@media screen and (min-width:768px) {
+	.modal-dialog {
+	width: 350px;
+	margin: 30px auto;
+	}
+}
+
+.psw{
+	margin-top: 25px;
+}
+.una{
+	margin-top: 5px;
+}
+body{
+	background-color: #fff;
+}
+.row{
+	margin-left: 11%;
+	margin-right: 11%;
+}

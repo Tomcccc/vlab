@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>vlab学习中心</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/mediaelement/build/mediaelementplayer.css" rel="stylesheet">
+        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+        <link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet"> 
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">            
+           
+            
+        <!-- CSS -->
+        <link href="css/app.min.1.css" rel="stylesheet">
+        <link href="css/app.min.2.css" rel="stylesheet">
+        <link href="css/learnclasss.css" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header" class="clearfix">
+            <ul class="header-inner clearfix">
+                <li id="menu-trigger" data-trigger=".ha-menu" class="visible-xs">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="logo ">
+                    <a href="vlabindex.html"></a>
+                </li>
+
+                    <nav class="nav_bar ha-menu">
+                        <ul>
+                            <li class="waves-effect"><a href="vlabindex.html">首页</a></li>
+                            <li class="active waves-effect"><a href="online.html">线上学习</a></li>
+                            <li class="waves-effect"><a href="vlababout/indexVlab.html">关于Vlab</a></li>
+                            <li class="waves-effect"><a href="service.html">Vlab服务</a></li>
+                            <li class="waves-effect"><a href="vlababout/indexNew.html">新闻中心</a></li>
+                        </ul>
+                    </nav>
+            <li class="pull-right login"><a data-toggle="modal" href="#modalDefault">sign in</a></li>
+            </ul>
+            <!-- Top Search Content -->
+            <div id="top-search-wrap">
+                <div class="tsw-inner">
+                    <i id="top-search-close" class="zmdi zmdi-arrow-left"></i>
+                    <input type="text">
+                </div>
+            </div>
+        </header>
+         <!-- Modal Default -->	
+        <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!--logo-->
+                    </div>
+                    <div class="modal-body">
+                        <div role="tabpanel" class="tab">
+                            <ul class="tab-nav" role="tablist">
+                                <li class="active"><a href="#home9" aria-controls="home9" role="tab" data-toggle="tab">login</a></li>
+                                <li role="presentation"><a href="#profile9" aria-controls="profile9" role="tab" data-toggle="tab">sign up</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active animated fadeInRight in" id="home9">
+                                    <form role="form" action="backstage/login.class.php" method="post">
+                                       <div class="input-group fg-float una">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                        <div class="fg-line">
+                                            <input type="text" class="form-control" name="username">
+                                            <label class="fg-label">用户名</label>
+                                        </div>
+                                        </div>
+                                        <div class="input-group fg-float psw">
+                                            <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                            <div class="fg-line">
+                                                <input type="password" class="form-control" name="password">
+                                                <label class="fg-label">密码</label>
+                                            </div>
+                                        </div>
+                                        <button type="button submit"class="btnn" value="login">log  &nbsp in</button> 
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane animated fadeInRight" id="profile9">
+                                    <div class="input-group fg-float una">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                        <div class="fg-line">
+                                            <input type="text" class="form-control">
+                                            <label class="fg-label">请输入你的账号</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group fg-float psw">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                        <div class="fg-line">
+                                            <input type="password" class="form-control">
+                                            <label class="fg-label">请输入你的密码</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group fg-float psw">
+                                        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                        <div class="fg-line">
+                                            <input type="password" class="form-control">
+                                            <label class="fg-label">请再次输入你的密码</label>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btnn">sign  &nbsp up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card col-md-8 col-sm-12">
+                <video src="media/big_buck_bunny.mp4" height="500" style="width: 100%"></video>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card-body card-padding">
+                    <div role="tabpanel">
+                        <ul class="tab-nav videos" role="tablist">
+                            <li class="active"><a href="#home11" aria-controls="home11" role="tab" data-toggle="tab">目录</a></li>
+                            <li><a href="#profile11" aria-controls="profile11" role="tab" data-toggle="tab">简介</a></li>
+                            <li><a href="#messages11" aria-controls="messages11" role="tab" data-toggle="tab">评价</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home11">
+                                <ul class="videolist">
+                                    <li> <a href="#">NO.1</a></li>
+                                    <li> <a href="#">NO.2</a></li>
+                                    <li> <a href="#">NO.3</a></li>
+                                </ul>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile11">
+                                <p> nisi. Praesent ac sem eget est egestas volutpat.
+    Cras varius. Morbi mollis tellus ac sapien. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Fusce vel dui.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages11">
+                                                                <div class="media">
+                                    <div class="pull-left">
+                                        <a href="#">
+                                            <img class="media-object" src="img/profile-pics/4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Lucy</h4>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                        
+                                    </div>
+                                </div>
+                                <div class="media m-b-20">
+                                    <div class="pull-left">
+                                        <a href="#">
+                                            <img class="media-object" src="img/profile-pics/3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="media-body">
+                                        <h4 class="media-heading">李四</h4>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                    </div>
+                                </div>
+                            
+                            <div class="html-editor"></div>
+                            <button class="btn bgm-green">提交</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+
+        
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+                <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+       
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+        <script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+        <script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        <script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
+        <script src="vendors/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
+
+        <script src="js/functions.js"></script>
+        <!--<script src="js/demo.js"></script>-->
+    </body>
+  </html>
